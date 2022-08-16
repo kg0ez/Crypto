@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Console", "Console", "{1DF1203E-9B0B-41D7-8417-28F788CB9E61}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{9053C83B-A1BD-4738-AF62-DA9B57F33BC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{B36BDF37-C22C-46B7-B7CD-0850E1C0B55D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Busines Logic", "Busines Logic", "{F7F50DA3-CE2B-42F5-A280-6A7446D27717}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.BusinesLogic", "Crypto.BusinesLogic\Crypto.BusinesLogic.csproj", "{7C5A51A7-583A-4935-9ABA-A36D28EB29FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Common", "Crypto.Common\Crypto.Common.csproj", "{F482A427-CD17-4F90-8FB2-5816890B0377}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Model", "Crypto.Model\Crypto.Model.csproj", "{34089B98-03AE-4981-844C-D75742375904}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Console", "Crypto.Console\Crypto.Console.csproj", "{C1920B3B-A53F-464D-8BF9-64718C00B7D8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{858F902A-BD82-493C-BC06-5152B49D8FAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Integration.CCXTLibrary", "Crypto.Integration.CCXTLibrary\Crypto.Integration.CCXTLibrary.csproj", "{B34127A4-B986-44C6-8C64-3A7B5D154C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.Integration.Cryptorank", "Crypto.Integration.Cryptorank\Crypto.Integration.Cryptorank.csproj", "{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C5A51A7-583A-4935-9ABA-A36D28EB29FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C5A51A7-583A-4935-9ABA-A36D28EB29FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C5A51A7-583A-4935-9ABA-A36D28EB29FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C5A51A7-583A-4935-9ABA-A36D28EB29FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F482A427-CD17-4F90-8FB2-5816890B0377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F482A427-CD17-4F90-8FB2-5816890B0377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F482A427-CD17-4F90-8FB2-5816890B0377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F482A427-CD17-4F90-8FB2-5816890B0377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34089B98-03AE-4981-844C-D75742375904}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34089B98-03AE-4981-844C-D75742375904}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34089B98-03AE-4981-844C-D75742375904}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34089B98-03AE-4981-844C-D75742375904}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1920B3B-A53F-464D-8BF9-64718C00B7D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1920B3B-A53F-464D-8BF9-64718C00B7D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1920B3B-A53F-464D-8BF9-64718C00B7D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1920B3B-A53F-464D-8BF9-64718C00B7D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B34127A4-B986-44C6-8C64-3A7B5D154C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B34127A4-B986-44C6-8C64-3A7B5D154C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B34127A4-B986-44C6-8C64-3A7B5D154C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B34127A4-B986-44C6-8C64-3A7B5D154C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8A9F3DA9-0E51-48B7-A0D5-2BDE75B4A047}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C5A51A7-583A-4935-9ABA-A36D28EB29FE} = {F7F50DA3-CE2B-42F5-A280-6A7446D27717}
+		{F482A427-CD17-4F90-8FB2-5816890B0377} = {B36BDF37-C22C-46B7-B7CD-0850E1C0B55D}
+		{34089B98-03AE-4981-844C-D75742375904} = {9053C83B-A1BD-4738-AF62-DA9B57F33BC4}
+		{C1920B3B-A53F-464D-8BF9-64718C00B7D8} = {1DF1203E-9B0B-41D7-8417-28F788CB9E61}
+		{B34127A4-B986-44C6-8C64-3A7B5D154C39} = {858F902A-BD82-493C-BC06-5152B49D8FAA}
+		{591EE0E7-0AB0-4ABB-BE83-BAAE6F5B6687} = {858F902A-BD82-493C-BC06-5152B49D8FAA}
+	EndGlobalSection
+EndGlobal
