@@ -11,6 +11,8 @@
 		public List<Instrument> Tools { get; set; }
 
 		public List<Ticker> Tickers { get; set; }
+
+		public List<TickerInfo> TickersInfo { get; set; }
 	}
 }
 

@@ -34,24 +34,35 @@ int exchangeId = exchangeService.GetId(ExchangeNames.POLONIEX);
 
 //feesService.Sync(ExchangeNames.POLONIEX, exchangeId);
 
-List<string> firstInstruments = new List<string> { "GMT", "USDD", "DOGE", "BTC", "ETC","TRX","BNB","ETHS","ETHW","CULT"};
+List<string> firstInstruments = new List<string> {"ETH", "GMT", "USDD", "DOGE", "BTC", "ETC","TRX","BNB","ETHS","ETHW","CULT"};
 
 //List<string> firstTool = new List<string> { "GMT", "USDD", "DOGE", "BTC", "ETC","TRX","BNB","ETHS","ETHW","CULT",
 //"BTT","LTC","DOT","XRP"};
 var tickers = serviceCollection.GetService<TickersService>();
 
-var tickerTimer = new System.Timers.Timer();
-tickerTimer.Start();
-tickerTimer.Elapsed += async (o, e) =>
+//var tickerTimer = new System.Timers.Timer();
+//tickerTimer.Start();
+//tickerTimer.Elapsed += async (o, e) =>
+//{
+//    tickerTimer.Interval = 1000;
+//    Task.Run(async () =>
+//    {
+//        await tickers.Sync(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
+//        Console.WriteLine("Save tickers " + DateTime.Now);
+//    });
+//};
+
+var tickerInfoTimer = new System.Timers.Timer();
+tickerInfoTimer.Start();
+tickerInfoTimer.Elapsed += async (o, e) =>
 {
-    tickerTimer.Interval = 1000;
+    tickerInfoTimer.Interval = 600000;
     Task.Run(async () =>
     {
-        await tickers.Sync(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
+        await tickers.UpdateVolume(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
         Console.WriteLine("Save tickers " + DateTime.Now);
     });
 };
-
 
 //var instrumentsService = serviceCollection.GetService<InstrumentsService>();
 //var instrumentTimer = new System.Timers.Timer();

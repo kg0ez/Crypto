@@ -13,6 +13,7 @@ namespace Crypto.BusinesLogic.Mapper
 			CreateMap<Ticker,TickerDto>().ReverseMap();
 			CreateMap<Fee,FeeDto>().ReverseMap();
 			CreateMap<ExchangeInfo, ExchangeInfoDto>().ReverseMap();
+			CreateMap<TickerInfo, TickerInfoDto>().ReverseMap();
 		}
 	}
 }

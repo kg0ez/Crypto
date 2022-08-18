@@ -44,7 +44,6 @@ namespace Crypto.BusinesLogic.Services.Implementations
 
         public void UpdateVolume(ExchangeInfoDto exchangeInfoDto,int id)
         {
-
             var exchangeInfo = _mapper.Map<ExchangeInfo>(exchangeInfoDto);
 
             exchangeInfo.ExchangeId = id;
