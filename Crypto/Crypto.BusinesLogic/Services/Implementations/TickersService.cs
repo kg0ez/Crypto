@@ -30,7 +30,7 @@ namespace Crypto.BusinesLogic.Services.Implementations
 			_context.SaveChanges();
 		}
 
-		public async Task UpdateVolume(string exchangeName, int exchangeId, List<string> firstInstruments,
+		public async Task UpdateOptions(string exchangeName, int exchangeId, List<string> firstInstruments,
 			string secondInstrument = "USDT")
 		{
 			var tickersInfoDto = await TickersHandler.GetTickersInfoAsync(firstInstruments, secondInstrument, exchangeName, exchangeId);
@@ -40,6 +40,17 @@ namespace Crypto.BusinesLogic.Services.Implementations
 			_context.TickersInfo.AddRange(tickersInfo);
 			_context.SaveChanges();
 		}
-	}
+
+        public async Task UpdateVolume(string exchangeName, int exchangeId, List<string> firstInstruments,
+            string secondInstrument = "USDT")
+        {
+            var tickersVolumeDto = await TickersHandler.GetVolumesAsync(firstInstruments, secondInstrument, exchangeName, exchangeId);
+
+            var tickersVolume = _mapper.Map<List<TickerVolume>>(tickersVolumeDto);
+
+            _context.TickerVolumes.AddRange(tickersVolume);
+            _context.SaveChanges();
+        }
+    }
 }
 

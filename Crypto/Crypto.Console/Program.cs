@@ -52,15 +52,27 @@ var tickers = serviceCollection.GetService<TickersService>();
 //    });
 //};
 
-var tickerInfoTimer = new System.Timers.Timer();
-tickerInfoTimer.Start();
-tickerInfoTimer.Elapsed += async (o, e) =>
+//var tickerInfoTimer = new System.Timers.Timer();
+//tickerInfoTimer.Start();
+//tickerInfoTimer.Elapsed += async (o, e) =>
+//{
+//    tickerInfoTimer.Interval = 600000;
+//    Task.Run(async () =>
+//    {
+//        await tickers.UpdateOptions(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
+//        Console.WriteLine("Update options" + DateTime.Now);
+//    });
+//};
+
+var tickerVolumeTimer = new System.Timers.Timer();
+tickerVolumeTimer.Start();
+tickerVolumeTimer.Elapsed += async (o, e) =>
 {
-    tickerInfoTimer.Interval = 600000;
+    tickerVolumeTimer.Interval = 600000;
     Task.Run(async () =>
     {
         await tickers.UpdateVolume(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
-        Console.WriteLine("Save tickers " + DateTime.Now);
+        Console.WriteLine("Update volumes " + DateTime.Now);
     });
 };
 

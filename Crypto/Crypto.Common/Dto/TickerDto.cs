@@ -2,7 +2,7 @@
 {
 	public class TickerDto
 	{
-		public string Couple { get; set; } = null!;
+		public string Pair { get; set; } = null!;
 		public long UpdatedAt { get; set; }
 		public decimal HighPrice { get; set; }
 		public decimal LowPrice { get; set; }
