@@ -64,38 +64,21 @@ namespace Crypto.Integration.CCXTLibrary.Handler
 
             foreach (var firstInstrument in firstInstruments)
             {
-				var orderBooks = await api.FetchOrderBooksAsync(firstInstrument, secondInstrument);
+				var ticker = await api.FetchTickerAsync(firstInstrument, secondInstrument);
 
-				var asks = orderBooks.result.asks;
-
-				volumesDto.AddRange(GetOrderBook(asks, "ask", orderBooks.marketId,exchangeId));
-
-				var bids = orderBooks.result.bids;
-
-				volumesDto.AddRange(GetOrderBook(bids, "bid", orderBooks.marketId,exchangeId));
-			}
-			return volumesDto;
-        }
-
-		private static List<TickerVolumeDto> GetOrderBook(List<OrderBookItem> manipulations,string manipulationType,string pair, int exchangeId)
-        {
-			var volumesDto = new List<TickerVolumeDto>();
-
-			foreach (var manipulation in manipulations)
-            {
 				var tickerVolumeDto = new TickerVolumeDto
 				{
-					Amount = manipulation.amount,
-					Price = manipulation.price,
-					Quantity = manipulation.quantity,
-					Pair = pair,
-					ManipulationType = manipulationType,
+					Pair = ticker.marketId,
+					BaseVolume = ticker.result.baseVolume,
+					QuoteVolume = ticker.result.quoteVolume,
 					ExchangeId = exchangeId
 				};
+
 				volumesDto.Add(tickerVolumeDto);
 			}
 			return volumesDto;
         }
+
 	}
     
 }

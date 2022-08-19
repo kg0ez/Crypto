@@ -64,11 +64,11 @@ var tickers = serviceCollection.GetService<TickersService>();
 //    });
 //};
 
-var tickerInfoTimer = new System.Timers.Timer();
-tickerInfoTimer.Start();
-tickerInfoTimer.Elapsed += async (o, e) =>
+var tickerVolumeTimer = new System.Timers.Timer();
+tickerVolumeTimer.Start();
+tickerVolumeTimer.Elapsed += async (o, e) =>
 {
-    tickerInfoTimer.Interval = 600000;
+    tickerVolumeTimer.Interval = 600000;
     Task.Run(async () =>
     {
         await tickers.UpdateVolume(ExchangeNames.POLONIEX, exchangeId, firstInstruments);
