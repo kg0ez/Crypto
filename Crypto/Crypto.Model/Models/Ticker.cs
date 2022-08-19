@@ -4,7 +4,7 @@ namespace Crypto.Model.Models
 {
 	public class Ticker:BaseModel
 	{
-		public string Couple { get; set; }
+		public string Pair { get; set; } = null!;
 		public long UpdatedAt { get; set; }
         [Precision(18, 6)]
 		public decimal HighPrice { get; set; }

@@ -2,7 +2,7 @@
 {
 	public class TickerInfo : BaseModel
 	{
-		public string Couple { get; set; }
+		public string Pair { get; set; } = null!;
 		public bool Deposit { get; set; }
 		public bool Whithdrawal { get; set; }
 		public bool Trade { get; set; }

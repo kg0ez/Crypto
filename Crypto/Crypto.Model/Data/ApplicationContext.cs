@@ -16,6 +16,7 @@ namespace Crypto.Model.Data
 		public DbSet<Instrument> Instruments { get; set; } = null!;
 		public DbSet<Fee> Fees { get; set; } = null!;
 		public DbSet<TickerInfo> TickersInfo { get; set; } = null!;
-	}
+		public DbSet<TickerVolume> TickerVolumes { get; set; } = null!;
+    }
 }
 
