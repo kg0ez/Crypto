@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1700.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crypto.BusinesLogic", "Crypto.BusinesLogic.csproj", "{12FE2A7E-4EB0-4DC9-A3C2-85A7619D4B31}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12FE2A7E-4EB0-4DC9-A3C2-85A7619D4B31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12FE2A7E-4EB0-4DC9-A3C2-85A7619D4B31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12FE2A7E-4EB0-4DC9-A3C2-85A7619D4B31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12FE2A7E-4EB0-4DC9-A3C2-85A7619D4B31}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4D1D9B9E-56A8-4196-BE5E-B13C70BB8F8B}
+	EndGlobalSection
+EndGlobal

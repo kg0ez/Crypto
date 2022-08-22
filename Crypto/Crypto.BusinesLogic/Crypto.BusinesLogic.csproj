@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Interface\" />
+    <None Remove="Services\Implementations\" />
+    <None Remove="Mapper\" />
+    <None Remove="AutoMapper" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interface\" />
+    <Folder Include="Services\Implementations\" />
+    <Folder Include="Mapper\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="11.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Crypto.Model\Crypto.Model.csproj" />
+    <ProjectReference Include="..\Crypto.Integration.CCXTLibrary\Crypto.Integration.CCXTLibrary.csproj" />
+  </ItemGroup>
+</Project>
